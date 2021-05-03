@@ -1,7 +1,7 @@
 +++
-title = "math"
+title = "maths"
 +++
-In LaTeX math:
+In LaTeX maths:
 
 - Don't use `*` for multiplication. Use `\cdot`, `\times`, or nothing at all.
 - For variable names that are words, use `$\text{count}$`.
