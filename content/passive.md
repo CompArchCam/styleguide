@@ -2,7 +2,7 @@
 title = "passive voice"
 +++
 Avoid the [passive voice][pv] as much as reasonable.
-When you say *the data is converted*, for example, your writing will be clearer if it is more specific about who or what does the conversion: the system, the algorithm, the user, the server, the authors, etc.
+Instead of saying *the data is converted*, for example, your writing will be clearer if it is more specific about who or what does the conversion: the system, the algorithm, the user, the server, the authors, etc.
 
 An imperfect way to tell whether a sentence is in the passive voice is to try adding *…by space aliens* to the end.
 If that works, you probably want to add a subject for your verb.
