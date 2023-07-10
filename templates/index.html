@@ -1,45 +1,68 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><title>Department of Computer Science and Technology: Timothy M. Jones: {% if page.title %}{{ page.title }}{% else %}{{ section.title }}{% endif %}</title><link rel="stylesheet" type="text/css" media="all" href="https://www.cl.cam.ac.uk/style/layout.css" /><link rel="stylesheet" type="text/css" media="print" href="https://www.cl.cam.ac.uk/style/print.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://www.cl.cam.ac.uk/~tmj32/style.css" media="all" rel="stylesheet" type="text/css" />
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <title>{{ config.extra.title }}</title>
-        <link rel="stylesheet" href="{{get_url(path="style.css", trailing_slash=false)}}">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <h1>
-                    <a href="/">Capra</a>
-                    Style Guide
-                </h1>
-            </nav>
-        </header>
-        <div id="content">
-            <main>
-                {% block content %}
+ga('create', 'UA-6374214-3', 'auto');  // Replace with your property ID.
+ga('send', 'pageview');
 
-                {{ section.content | safe }}
+</script>
+<link href="part1a/index.html" rel="Next" /><link href="../" rel="Up" /></head><body class="one-col dept">
+<div id="skip"> <a href="#skip-content" accesskey="2">Skip to content</a>&#160;|&#160;<a href="https://www.cam.ac.uk/site/accesskeys.html" accesskey="0">Access key help</a> </div><div id="header">
+  <div id="branding"><a href="https://www.cam.ac.uk/" accesskey="1"><img src="https://www.cl.cam.ac.uk/images/identifier.svg" alt="University of Cambridge" class="ucam" /></a>
+  </div>
 
-                <nav>
-                    {% for page in section.pages | sort(attribute="slug") %}
-                    <a href="#{{page.slug}}">{{page.slug}}</a>
-                    {% endfor %}
-                </nav>
+    <div id="site-search">
 
-                {% for page in section.pages | sort(attribute="slug") -%}
-                <article id="{{ page.slug }}">
-                    <header>
-                        <a href="#{{page.slug}}">#{{ page.slug }}</a>
-                        <h2>{{ page.title }}</h2>
-                    </header>
-                    {{ page.content | safe }}
-                </article>
-                {%- endfor %}
-                {% endblock content %}
-            </main>
-        </div>
-    </body>
-</html>
+    <form action="https://www.google.co.uk/search" method="get">
+      <fieldset>
+      <label for="search-term">Search</label>
+      <input name="q" type="text" id="search-term" accesskey="4" value="" />
+      <input id="search-button" src="https://www.cl.cam.ac.uk/images/button-search.gif" value="Search" alt="Search" title="Search" type="image" />
+      <input name="domains" type="hidden" value="cam.ac.uk;www.cl.cam.ac.uk" /><input name="sitesearch" type="hidden" value="www.cl.cam.ac.uk" /></fieldset>
+    </form>
+
+    <ul><li class="last"><a href="https://www.cl.cam.ac.uk/search/">Advanced search</a></li><li><a href="https://www.cl.cam.ac.uk/az/">A&#8211;Z</a></li><li><a href="https://www.cl.cam.ac.uk/contact/">Contact us</a></li></ul></div>
+</div>
+
+<div id="dept-title">
+<h1><a href="https://www.cl.cam.ac.uk/">Department of Computer Science and Technology</a></h1></div>
+
+<div id="container"> <a name="skip-content" id="skip-content"></a>
+  <ul id="nav-breadcrumb">
+    <li class="first"><a href="https://www.cl.cam.ac.uk/">Computer Laboratory</a></li>
+    <li><a href="https://www.cl.cam.ac.uk/research/comparch/">Computer Architecture Group</a></li>
+    <li><a href="https://www.cl.cam.ac.uk/~tmj32/">Timothy M. Jones</a></li>
+    <li><a href=".">Style Guide</a></li>
+  </ul>
+  <div id="content">
+
+    {% block content %}
+    <div id="content-primary">
+      <div class="ucampas-toc right">
+        <table><tbody><tr><td><p>Contents</p><ul>
+          {% for page in section.pages | sort(attribute="slug") %}
+          <li><a href="#{{page.slug}}">{{page.slug}}</a></li>
+          {% endfor %}
+        </ul></td></tr></tbody></table>
+      </div>
+      <h1>Style guide</h1>
+      {{ section.content | safe }}
+      {% for page in section.pages | sort(attribute="slug") -%}
+      <hr class="style-divider">
+      <div class="style-entry" id="{{ page.slug }}">
+        <h2><a href="#{{page.slug}}">#{{ page.slug }}</a>
+          {{ page.title }}</h2>
+        {{ page.content | safe }}
+      </div>
+      {%- endfor %}
+    </div>
+    {% endblock content %}
+
+</div><ul id="site-info"><li class="copy">&#169; 2022 Computer Laboratory, University of Cambridge<br />Information provided by <a href="https://www.cl.cam.ac.uk/~tmj32/">Timothy M. Jones</a></li></ul></div>
+</body></html>

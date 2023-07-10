@@ -10,11 +10,11 @@ site:
 	rm public/sitemap.xml
 
 serve:
-	zola serve
+	zola serve -O
 
 # Deployment.
 RSYNCARGS := --compress --recursive --checksum --itemize-changes \
 	--delete -e ssh --perms --chmod=Du=rwx,Dgo=rx,Fu=rw,Fog=r
-DEST := courses:coursewww/capra.cs.cornell.edu/htdocs/styleguide
+DEST := cam:public_html/styleguide
 deploy: site
 	rsync $(RSYNCARGS) ./public/ $(DEST)

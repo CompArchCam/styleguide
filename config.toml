@@ -1,7 +1,7 @@
-base_url = "https://capra.cs.cornell.edu/styleguide"
+base_url = "https://www.cl.cam.ac.uk/~tmj32/styleguide"
 compile_sass = true
 highlight_code = false
 build_search_index = false
 
 [extra]
-title = "Capra Style Guide"
+title = "Style Guide"
