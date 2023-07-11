@@ -9,4 +9,4 @@ For example:
 
 In TeX, remember to use `` ` `` for opening and `'` for closing single quotation marks, or two of each for double.
 TeX will typeset `'this'` with opening quotation marks on both sides, which is incorrect.
-Note that single quotation marks are preferred in British English, with double quotation marks used for a quotes within quotes.
+Note that single quotation marks are preferred in British English, with double quotation marks used for a quote within quotes.
