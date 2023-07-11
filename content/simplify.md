@@ -16,7 +16,7 @@ Here are some find/replace patterns for simplifying language:
 - *as can be seen in the figure, X* → *the figure shows that X* or just *X*
 - *has the potential to* → *could*
 - *a sufficient amount of* → *enough*
-- *utilize* → *use*
+- *utilise* → *use*
 - *make use of* → *use*
 - *note that X* → *X*
 - *it is worth noting that X* → *X*
