@@ -2,7 +2,7 @@
 title = "citation as nouns"
 +++
 
-Citation are not nouns. For example, this is wrong:
+Citations are not nouns. For example, this is wrong:
 
 - *We build on the work of [32].*
 
